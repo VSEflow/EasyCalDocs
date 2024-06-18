@@ -1,6 +1,6 @@
 # About VSE EasyCal
 
-Distributed by [VSE Volumentechnik GmbH](https://vse-flow.com) :material-link:
+Distributed by [VSE Volumentechnik GmbH](https://www.vse-flow.com/cal-flow-kalibriersystem.html) :material-link:
 
 ## End User License Agreement (EULA)
 ### VSE “EasyCal” Software

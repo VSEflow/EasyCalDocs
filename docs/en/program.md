@@ -87,7 +87,7 @@ Flow steady hysteresis | Steadyness check: The flowrate needs to be steady in th
 Minimum flow hysteresis | Steadyness check: Limit the minimum hysteresis that is being calculated from the ```Flow steady hysteresis``` percentage. This is useful if the flow is pulsating or cannot be set with enough precision. This feature can be disabled by entering ```0```. This value should be set based on how precisely you can adjust the flowrate of your calibration system with low flowrates.
 Maximum flow hysteresis | Steadyness check: Limit the maximum hysteresis that is being calculated from the ```Flow steady hysteresis``` percentage. This is useful if you want to set exact calibration points even in the higher flowrange. This feature can be disabled by entering ```0```. This value should be set based on how precisely you can adjust the flowrate of your calibration system with high flowrates.
 
-##### Step 6: Calibration point setup
+##### Step 6: Calibration point setup {id="calibration-point-setup"}
 ![](img/calpointsetup.png)
 
 The calibration points are the flowrates that will be tested in the calibration procedure. At least one point has to be specified. The values can either be added manually using the four buttons at the bottom of the table or calculated automatically using the [template generator](program.md#template-generator). 

@@ -92,7 +92,7 @@ Without any connection, the user can only load existing calibration results.
 ![](img/tabpages.png) 
 
 #### Preset-based calibration configuration
-Most of the calibration configuration is preset based. This means that all fields of a certain groupbox can be saved and restored using the corresponding buttons. This is for example useful if you have a few masters on hand that you want to specify once and later use again. Also company internal standards for measurement specifications can be saved so that all calibrations are based on the same settings. The presets are stored in the Appdata directory (which can be manually opened using the [file menu](program.md#file-menu)) and are automatically imported on program start. 
+Most of the calibration configuration is preset based. This means that all fields of a certain groupbox can be saved and restored using the corresponding buttons. This is for example useful if you have a few masters on hand that you want to specify once and later use again. Also company internal standards for measurement specifications can be saved so that all calibrations are based on the same settings. The presets are stored in the Appdata directory (which can be manually opened using the [file menu](basics.md#file-menu)) and are automatically imported on program start. 
 
 ??? question "Manage presets"
     If you want to manage your presets or delete some of them, use the appdata folder to browse all presets and delete the corresponding `*.xml`-Files
