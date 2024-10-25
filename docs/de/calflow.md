@@ -29,8 +29,8 @@ Gewicht | 140 g
 Versorgungsspannung DC-Netzanschluss | 24 V DC nominal (18-26 V DC)
 Leerlaufstrom | ~ _tbd_ mA
 Maximale Stromaufnahme (DC-Netz/extern) | Abhängig von der Spannungsversorgung
-Maximale Stromaufnahme (Hochsetzsteller) | 50 mA (@24 V) insgesamt
-Maximal empfohlene Eingangsfrequenz | ≤ 250 MHz
-Maximal messbare Eingangsfrequenz | ~ 1-2 GHz
+Maximale Stromaufnahme (Boost-Converter) | 50 mA (@24 V) insgesamt
+Maximal empfohlene Eingangsfrequenz | ≤ 250 kHz
+Maximal messbare Eingangsfrequenz | ~ 1-2 MHz
 Maximale USB-Abtastrate | 1000 Hz
 Frequenzmessgenauigkeit/Fehler | ≤ 0,005%
