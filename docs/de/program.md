@@ -25,11 +25,11 @@ Mit der Portkonfiguration wird das Messprinzip des Cal.flow konfiguriert. Für d
 Die Linearisierungstabelle kann manuell eingegeben oder aus einer Microsoft Word- oder Excel-basierten Tabelle in einem passenden Format kopiert werden. Der Befehl `Einfügen` fügt die Tabelle ab der zuletzt markierten Zelle ein, also klicken Sie bitte mit der linken Maustaste auf die Zelle oben links, wo das Einfügen beginnen soll. Verwenden Sie nach dem Einfügen die Schaltfläche `Punkte sortieren`, um die Punkte unten auszurichten.
 Die Frequenzen und der K-Faktor sollten mit dem Interpolationsfaktor des Volumensensors übereinstimmen.
 
-!!! info "Preset save info"
+!!! info "Linearisierung ist mit im Master-Preset"
 
     Die Linearisierungstabelle wird zusammen mit dem Master-Preset gespeichert, auch wenn sie sich nicht in der gleichen Groupbox befindet.
 
-!!! Hinweis
+!!! info "Zeit sparen bei der Linearisierungstabelle"
 
     Bitte beachten Sie, dass nur zwei Spalten in die Linearisierungstabelle eingetragen werden müssen. Die dritte Spalte kann aus den beiden anderen berechnet werden, indem Sie auf die entsprechende Berechnungsschaltfläche klicken (siehe Abbildung).
 
@@ -40,14 +40,19 @@ Die Frequenzen und der K-Faktor sollten mit dem Interpolationsfaktor des Volumen
 
 Für die Stromversorgung kann der Benutzer zwischen 3 Optionen wählen:
 
-* **Option 1:** Verwendung eines M12 T-Steckers zur Einspeisung von 24V in eines der Kabel des Volumensensors. Die Stromversorgung wird dann mit dem anderen Volumensensor gebrückt. Bei dieser Option wird keine Spannungsprüfung durch den Cal.flow durchgeführt.
-**Option 2:** Verwendung einer externen 24-V-Stromversorgung und Anschluss an den DC-Stromversorgungsbuchseneingang. Der Verbindungsstatus des Steckers wird in der Statusbox angezeigt. 
+- **Option 1:** Verwendung eines M12 T-Steckers zur Einspeisung von 24V in eines der Kabel des Volumensensors. Die Stromversorgung wird dann mit dem anderen Volumensensor gebrückt. Bei dieser Option wird keine Spannungsprüfung durch den Cal.flow durchgeführt.
 
-!!! Warnung inline end "Don't use boost with 2x TB2" 
+- **Option 2:** Verwendung einer externen 24-V-Stromversorgung und Anschluss an den DC-Stromversorgungsbuchseneingang. Der Verbindungsstatus des Steckers wird in der Statusbox angezeigt. Bitte nicht zusammen mit T-Stücken verwenden!
 
-    Die Leistungsaufnahme von zwei VSE TestBox 2 Geräten ist zu groß, um sie mit dem internen Hochsetzsteller zu betreiben. Verwenden Sie die externe Stromversorgung!
+!!! warning inline end "Achtung bei 2 Testboxen" 
 
-* **Option 3:** Verwendung des internen 5V zu 24V Boost-Konverters. Er kann über die entsprechende Schaltfläche neben dem Statusfeld umgeschaltet werden. Es muss keine zusätzliche Spannungsversorgung angeschlossen werden. Die Stromversorgung des Volumensensors erfolgt über den USB-Anschluss des PCs. Um eine Überhitzung und Beschädigung des Cal.flow zu vermeiden, ist eine maximale kombinierte Stromaufnahme von 50mA @ 24V beider Volumensensoren erlaubt. Wenn der interne Hochsetzsteller aktiv ist, während die DC-Buchse eingesteckt ist, wird der Hochsetzsteller automatisch abgeschaltet.
+    Die Leistungsaufnahme von zwei VSE TestBox 2 Geräten ist zu groß, um sie mit dem internen Boost-Converter zu betreiben. Verwenden Sie die externe Stromversorgung!
+
+- **Option 3:** Verwendung des internen 5V zu 24V Boost-Konverters. Er kann über die entsprechende Schaltfläche neben dem Statusfeld umgeschaltet werden. Es muss keine zusätzliche Spannungsversorgung angeschlossen werden. Die Stromversorgung des Volumensensors erfolgt über den USB-Anschluss des PCs. Um eine Überhitzung und Beschädigung des Cal.flow zu vermeiden, ist eine maximale kombinierte Stromaufnahme von 50mA @ 24V beider Volumensensoren erlaubt. Wenn der interne Boost-Converter aktiv ist, während die DC-Buchse eingesteckt ist, wird der Boost-Converter automatisch abgeschaltet.
+
+!!! danger "Warnung: Ext. Netzteil nicht bei Anlagenspannung verwenden"
+    Vor Anschluss und Verwendung des externen Netzteils sollte, insbesondere bei Verwendung von T-Stücken, sichergestellt werden, dass das Netzteil nicht Spannung in die Anlage zurückspeist bzw. mit dem 24V-Rail der Anlage verbunden wird. Andernfalls wird bei Spannungsabschaltung der Anlage diese über das Netzteil versorgt und dieses überhitzt oder kann sogar zerstört werden. 
+
 
 #### :material-test-tube: Schritt 3: Flüssigkeitsspezifikation
 

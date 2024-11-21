@@ -40,13 +40,19 @@ The frequencies and K-Factor should be matching the flowmeter's interpolation fa
 
 For the power supply, the user can choose between 3 options:
 
-* **Option 1:** Use of a M12 T-Connector to inject 24V into one of the flowmeter cables. The power supply is then bridged to the other flowmeter. No voltage check is performed by the Cal.flow, if using this option.
-* **Option 2:** Use of an external 24V power supply and connecting it on the DC power jack input. The connection status of the plug will be shown in the status box. 
+- **Option 1:** Use of a M12 T-Connector to inject 24V into one of the flowmeter cables. The power supply is then bridged to the other flowmeter. No voltage check is performed by the Cal.flow, if using this option.
+
+- **Option 2:** Use of an external 24V power supply and connecting it on the DC power jack input. The connection status of the plug will be shown in the status box. Please don't use together with the T-connectors!
 
 !!! warning inline end "Don't use boost with 2x TB2" 
 
     The power draw of two VSE TestBox 2 devices is too big to be driven with the internal boost converter. Use the external power supply!
-* **Option 3:** Use of the internal 5V to 24V boost converter. It can be toggled using the corresponding button next to the status box. No additional power supplied need to be connected. The flowmeter supply current will be drawn from the PC's USB port. To avoid overheating and damage of the Cal.flow a maximum combined current draw of 50mA @ 24V of both flowmeters is allowed. If the internal boost converter is active while plugging the DC jack in, the boost converter is automatically switched off.
+- **Option 3:** Use of the internal 5V to 24V boost converter. It can be toggled using the corresponding button next to the status box. No additional power supplied need to be connected. The flowmeter supply current will be drawn from the PC's USB port. To avoid overheating and damage of the Cal.flow a maximum combined current draw of 50mA @ 24V of both flowmeters is allowed. If the internal boost converter is active while plugging the DC jack in, the boost converter is automatically switched off.
+
+!!! danger "Warning: Don't use external power supply with testbench power!"
+    Before connecting and using the included external power supply, especially when using T-connectors, it should be ensured that the power supply does not feed voltage back into the system or is connected to the 24V rail of the testbench. Otherwise, if the testbench is switched off, it will be supplied via the power supply, which may overheat or even be destroyed.
+
+
 
 #### Step 3: Fluid specification
 
