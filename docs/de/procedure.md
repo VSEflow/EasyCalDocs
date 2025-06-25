@@ -149,13 +149,13 @@ Wenn ein Ergebnis ausgewählt ist, wird das zugehörige Kalibrierungsprotokoll i
 
 ![plotsettings](img/plotsettings.png)
 
-Berichtfehlerplot auf ±1% begrenzen__ 
+__Berichtfehlerplot auf ±1% begrenzen__ 
 
 :material-checkbox-outline: Wenn diese Option aktiviert ist (_Standard_), beträgt der Fehlerplotbereich des generierten Kalibrierungsprotokolls ±1%. 
 
 :material-checkbox-blank-outline: Wenn nicht angekreuzt, wird die Skalierung automatisch berechnet.
 
-Wiederholbarkeitsberechnungsmethoden__ 
+__Wiederholbarkeitsberechnungsmethoden__ 
 
 Wählen Sie zwischen zwei Berechnungsmodi für die Wiederholbarkeit der Messstelle. Die Wiederholbarkeit gibt an, wie wiederholbar ein gemessener Durchflusswert unter gleichen Durchflussbedingungen zu verschiedenen Zeiten (z.B. Messzyklen) ist. Eine Wiederholbarkeitsberechnung ist nur bei mindestens zwei Zyklen möglich.
 
@@ -170,6 +170,17 @@ Wählen Sie zwischen zwei Berechnungsmodi für die Wiederholbarkeit der Messstel
     $$
     \textrm{Wiederholbarkeit im Punkt n [%]} = 100 \cdot \frac{\sigma_{\text{ K,n}}}{\overline{K_{n}}}
     $$
+
+<!-- Manuell gesetzter Sprungpunkt -->
+<a id="error-calc"></a>
+
+__Fehlerberechnung__
+
+Der relative Fehler im Punkt \(n\) [%] wird auf Basis des arithmetischen Mittelwerts $\overline{K}$ aller gemessenen K-Faktoren berechnet als:
+
+$$
+\mathrm{Relativer\ Fehler}_n\ [\%] = 100 \cdot \frac{K_n - \overline{K}}{\overline{K}}
+$$
 
 ### Verwaltung der Unternehmensdaten
 ![](img/company.png)

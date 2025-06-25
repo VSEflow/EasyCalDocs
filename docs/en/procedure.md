@@ -171,6 +171,21 @@ Choose between two calculation modes for the measurement point repeatability. Th
     \textrm{Repeatability at Point n [%]} = 100 \cdot \frac{\sigma_{\text{ K,n}}}{\overline{K_{n}}}
     $$
 
+
+
+<!-- Manually set anchor point -->
+<a id="error-calc"></a>
+
+__Error Calculation__
+
+The relative error at point \(n\) [%] is calculated based on the arithmetic mean $\overline{K}$ of all measured K-factors as:
+
+$$
+\mathrm{Relative\ Error}_n\ [\%] = 100 \cdot \frac{K_n - \overline{K}}{\overline{K}}
+$$
+
+
+
 ### Company data management
 ![](img/company.png)
 
