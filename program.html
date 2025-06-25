@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="basics.html">
+      
+      
+        <link rel="next" href="procedure.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Setup - VSE EasyCal v2.3 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#calibration-setup" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="VSE EasyCal v2.3 Documentation" class="md-header__button md-logo" aria-label="VSE EasyCal v2.3 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSE EasyCal v2.3 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="program.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="de/program.html" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="basics.html" class="md-tabs__link">
+        
+  
+    
+  
+  Basics
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="program.html" class="md-tabs__link">
+        
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="procedure.html" class="md-tabs__link">
+        
+  
+    
+  
+  Calibration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="calflow.html" class="md-tabs__link">
+        
+  
+    
+  
+  Cal.flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="advanced.html" class="md-tabs__link">
+        
+  
+    
+  
+  Advanced
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="faqs.html" class="md-tabs__link">
+        
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="VSE EasyCal v2.3 Documentation" class="md-nav__button md-logo" aria-label="VSE EasyCal v2.3 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    VSE EasyCal v2.3 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="program.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#master-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Master setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Master setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-load-master-calibration-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Load Master Calibration Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-power-supply-for-flowmeters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Power supply for flowmeters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-fluid-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Fluid specification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-dut-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: DUT setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-5-measurement-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: Measurement configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 5: Measurement configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description-of-the-calibration-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of the calibration procedure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulse-counting-and-calibration-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pulse counting and calibration setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-measurement-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Measurement Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calibration-point-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Calibration point setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-generator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Generator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-7-output-directory-for-calibration-protocols" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: Output Directory for calibration protocols
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-8-specify-documentation-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Specify documentation settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starting-the-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starting the measurement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="procedure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calibration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cal.flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faqs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="calibration-setup">Calibration setup<a class="headerlink" href="#calibration-setup" title="Permanent link">#</a></h1>
+<h3 id="navigation">Navigation<a class="headerlink" href="#navigation" title="Permanent link">#</a></h3>
+<p>The setup is designed like a step-by-step assistant which will guide you through the calibration and documentation procedure. 
+Use the buttons at the top to navigate between pages. The software will tell you, if you missed something along the way.</p>
+<p><img alt="buttons" src="img/buttons.png" /></p>
+<h3 id="master-setup"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 16 3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5m14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1Z"/></svg></span>  Master setup<a class="headerlink" href="#master-setup" title="Permanent link">#</a></h3>
+<p>On the master setup page all settings regarding the master flowmeter such as linearization data and IPF are set. 
+Also the power supply will be checked and a datastorage path must be specified, where the result files will be automatically saved.  </p>
+<h4 id="step-1-load-master-calibration-data">Step 1: Load Master Calibration Data<a class="headerlink" href="#step-1-load-master-calibration-data" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/step1.png" /></p>
+<p>The master flowmeter type and serial number are queried for documentation purposed because they are shown on the generated calibration protocol. The IPF is used for the calculation of the measured pulses and should match with the frequencies and K-Factors of the corresponding linearization table. </p>
+<p>With the port config the measurement principle of the Cal.flow will be configured. You can use the two channel evaluation (<em>default</em>) for most flowmeters. For certain one-channel flowmeters (EF/VHM) you have to specify the input pin. Please also read the <a href="basics.html#m12-input-signals">notes regarding PNP/NPN signals</a> for these flowmeter output types.</p>
+<p><strong>Linearization table</strong></p>
+<p><img alt="" src="img/lintable.png" /></p>
+<p>The linearization table can be entered manually or copy-pasted from a Microsoft Word or Excel based table in a matching format. The 'paste command' will paste from the last selected cell, so please left click on the 'top-left' cell where the paste should start. After pasting use the <code>Sort Points</code> button to bottom align the points.
+The frequencies and K-Factor should be matching the flowmeter's interpolation factor.</p>
+<div class="admonition info">
+<p class="admonition-title">Preset save info</p>
+<p>The linearization table is saved alongside with the master preset even though it is not inside the same groupbox.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Please note that only two columns need to be entered into the linearization table. The third column can be calculated from the two other ones by clicking the corresponding calculation button (see image).</p>
+</div>
+<h4 id="step-2-power-supply-for-flowmeters">Step 2: Power supply for flowmeters<a class="headerlink" href="#step-2-power-supply-for-flowmeters" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/step2.png" /></p>
+<p>For the power supply, the user can choose between 3 options:</p>
+<ul>
+<li>
+<p><strong>Option 1:</strong> Use of a M12 T-Connector to inject 24V into one of the flowmeter cables. The power supply is then bridged to the other flowmeter. No voltage check is performed by the Cal.flow, if using this option.</p>
+</li>
+<li>
+<p><strong>Option 2:</strong> Use of an external 24V power supply and connecting it on the DC power jack input. The connection status of the plug will be shown in the status box. Please don't use together with the T-connectors!</p>
+</li>
+</ul>
+<div class="admonition warning inline end">
+<p class="admonition-title">Don't use boost with 2x TB2</p>
+<p>The power draw of two VSE TestBox 2 devices is too big to be driven with the internal boost converter. Use the external power supply!</p>
+</div>
+<ul>
+<li><strong>Option 3:</strong> Use of the internal 5V to 24V boost converter. It can be toggled using the corresponding button next to the status box. No additional power supplied need to be connected. The flowmeter supply current will be drawn from the PC's USB port. To avoid overheating and damage of the Cal.flow a maximum combined current draw of 50mA @ 24V of both flowmeters is allowed. If the internal boost converter is active while plugging the DC jack in, the boost converter is automatically switched off.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Warning: Don't use external power supply with testbench power!</p>
+<p>Before connecting and using the included external power supply, especially when using T-connectors, it should be ensured that the power supply does not feed voltage back into the system or is connected to the 24V rail of the testbench. Otherwise, if the testbench is switched off, it will be supplied via the power supply, which may overheat or even be destroyed.</p>
+</div>
+<h4 id="step-3-fluid-specification">Step 3: Fluid specification<a class="headerlink" href="#step-3-fluid-specification" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/fluidspec.png" /></p>
+<p>The calibration viscosity and temperature of the fluid have to be specified as they also appear on the calibration procotol. These values can also be saved as a seperate preset to be used in other calibrations. </p>
+<h4 id="step-4-dut-setup"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 2v2h1v14a4 4 0 0 0 4 4 4 4 0 0 0 4-4V4h1V2H7m4 14c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m2-4c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1m1-5h-4V4h4v3Z"/></svg></span> Step 4: DUT setup<a class="headerlink" href="#step-4-dut-setup" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/dutsetup.png" /></p>
+<p>Using the <code>DUT setup</code> tab the test flowmeter is specified. This step is comparable with <a href="program.html#step-1-load-master-calibration-data">step 1</a> - but this time the DUT data has to be specified. Again, the flowmeter type and serial number are queried for documentation on the calibration protocol. The approximate or nominal K-Factor (including IPF) is used to calculate the flowrate from the measured frequency, so that the right value is shown in the live plot. For VSE flowmeters, the K-Factor can be looked up using the <code>Look up</code> button. Alternatively you can also measure the approximate value using the <code>Measure</code> button and a steady flow through both flowmeters. The flowrate will then be calculated using the current frequency values of both flowmeters. Look at the live plot to verify that the selected input port configuration for the DUT is correct.</p>
+<h4 id="step-5-measurement-configuration">Step 5: Measurement configuration<a class="headerlink" href="#step-5-measurement-configuration" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/measconfig.png" /></p>
+<h5 id="description-of-the-calibration-procedure">Description of the calibration procedure<a class="headerlink" href="#description-of-the-calibration-procedure" title="Permanent link">#</a></h5>
+<p>The calibration procedure will request the tester to manually set the flowrate to each of the specified <a href="program.html#calibration-point-setup">calibration points</a>. When the actual flowrate of the master is inside the flowrate hysteresis window of the requested value, a steadyness check will be performed for a specified duration. During this time, the flowrate must not exceed the hysteresis window, else the steadyness counter will be reset. After the steadyness check is successful, the software will start counting the pulses of both flowmeters and perform a K-Factor calculation. The software will then request the user to set the flow for the next calibration point. This cycle repeats until all calibration points for all calibration cycles are measured. After this, the protocol can be generated.</p>
+<h5 id="pulse-counting-and-calibration-setup">Pulse counting and calibration setup<a class="headerlink" href="#pulse-counting-and-calibration-setup" title="Permanent link">#</a></h5>
+<p>The following parameters can be configured:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Number of cycles</td>
+<td>Number of times, the measurement of all calibration points is repeated. A minimum value of <code>2</code> is necessary for the calculation of the reproducibility.</td>
+</tr>
+<tr>
+<td>Number of gear teeth / pulses</td>
+<td>Number of measured gear teeth / pulses (≙ non-interpolated rising signal edges of one channel). The higher the value, the more accurate the results are. Please note that the measure time for each point also rises. The total number of measured signal edges will be internally calculated based on the IPF and the port config of each channel.</td>
+</tr>
+<tr>
+<td>Resulting fluid volume</td>
+<td>Informative value that shows the volume that corresponds to the target pulse count.</td>
+</tr>
+<tr>
+<td>Time limit</td>
+<td>The maximum point calibration time can be limited by this value (Unit: seconds). The total number of signal edges will then be cropped so they fit into the specified time frame. Use this feature if the measurement time is very long with low flowrates. The use of this feature may decrease the accuracy of the calculated K-Factor. Setting the value to zero, disables the time limit. This will prohibit the cropping of the total number of signal edges and result in a constant measurement accuracy.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="advanced-measurement-settings">Advanced Measurement Settings<a class="headerlink" href="#advanced-measurement-settings" title="Permanent link">#</a></h5>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum measurement time</td>
+<td>Counterpart of <code>time limit</code>: Especially if high frequencies are measured, a value <code>&gt;0</code> will make sure that at least the specified duration will be measured. Set to <code>0</code> to disable this feature.</td>
+</tr>
+<tr>
+<td>Flow steady time</td>
+<td>Steadyness check: The flowrate needs to be steady for this duration to start the measurement (Unit: seconds).</td>
+</tr>
+<tr>
+<td>Flow steady hysteresis</td>
+<td>Steadyness check: The flowrate needs to be steady in this flowrate region to start the measurement (Unit: % of Q).</td>
+</tr>
+<tr>
+<td>Minimum flow hysteresis</td>
+<td>Steadyness check: Limit the minimum hysteresis that is being calculated from the <code>Flow steady hysteresis</code> percentage. This is useful if the flow is pulsating or cannot be set with enough precision. This feature can be disabled by entering <code>0</code>. This value should be set based on how precisely you can adjust the flowrate of your calibration system with low flowrates.</td>
+</tr>
+<tr>
+<td>Maximum flow hysteresis</td>
+<td>Steadyness check: Limit the maximum hysteresis that is being calculated from the <code>Flow steady hysteresis</code> percentage. This is useful if you want to set exact calibration points even in the higher flowrange. This feature can be disabled by entering <code>0</code>. This value should be set based on how precisely you can adjust the flowrate of your calibration system with high flowrates.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="calibration-point-setup">Step 6: Calibration point setup<a class="headerlink" href="#calibration-point-setup" title="Permanent link">#</a></h5>
+<p><img alt="" src="img/calpointsetup.png" /></p>
+<p>The calibration points are the flowrates that will be tested in the calibration procedure. At least one point has to be specified. The values can either be added manually using the four buttons at the bottom of the table or calculated automatically using the <a href="program.html#template-generator">template generator</a>. </p>
+<h5 id="template-generator">Template Generator<a class="headerlink" href="#template-generator" title="Permanent link">#</a></h5>
+<p><img alt="" src="img/template.png" /></p>
+<p>The template generator allows the user to calculate a specified number of calibration points in a custom range of flowrates. If a VSE flowmeter is going to be calibrated, the  min. and max. flowrate values can be looked up to fill in the input fields. After this, the values can be manually adjusted to the preferred flow range. There are three calculation styles for the distribution of the calibration points:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Calculation style</strong></th>
+<th><strong>Explaination</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linear</td>
+<td>Even distribution of the calibration points in the specified interval</td>
+</tr>
+<tr>
+<td>Exponential</td>
+<td>Use of a exponential function to distribute the calibration points. This shifts more points into the lower flow range where the flowmeter accuracy is non-linear and more points are needed to describle it's characteristic curve.</td>
+</tr>
+<tr>
+<td>Exponential^2</td>
+<td>Applies the exponential function a second time for even stronger points redistribution into the lower range.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="step-7-output-directory-for-calibration-protocols">Step 7: Output Directory for calibration protocols<a class="headerlink" href="#step-7-output-directory-for-calibration-protocols" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/step3.png" /></p>
+<p>In this step the directory for the storage of all calibration results needs to be specified. The folder path will be automatically saved for all following program startups. The directory that is being specified will be the root directory of the following directory-structure:</p>
+<div class="highlight"><pre><span></span><code>├── root directory
+│   ├── YYYY-MM (year and month directory)
+│   │   ├── CP-*.xml (calibration data file)
+</code></pre></div>
+<h4 id="step-8-specify-documentation-settings">Step 8: Specify documentation settings<a class="headerlink" href="#step-8-specify-documentation-settings" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/step7.png" /></p>
+<p>In this step, the protocol name needs to be specified. If the name is not important, it can be automatically generated from the DUT serial number and the current date. If no name is entered and the calibration is started, the program askes again to generate a name automatically. </p>
+<p>Futhermore the test person's name is queried because it is written onto the calibration protocol. A list of recent names is saved in the auto-complete history of the field. </p>
+<p>The 'Additional info' field allows the tester to specify the measurement more in-depth. The text will also be shown on the calibration protocol. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The name of the test person and the contents of the 'Additional info' field can also be changed later during the report generation.</p>
+</div>
+<h4 id="starting-the-measurement">Starting the measurement<a class="headerlink" href="#starting-the-measurement" title="Permanent link">#</a></h4>
+<p>To start the measurement, use the <code>Next step</code> button. The software will check all entered values for validness beforehand. If a message box is displayed, follow the hints to solve the problem before proceeding.</p>
+<p><a href="procedure.html#calibration"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg></span> Go to next chapter</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="basics.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Basics">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Basics
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="procedure.html" class="md-footer__link md-footer__link--next" aria-label="Next: Calibration">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Calibration
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "toc.integrate", "navigation.expand", "navigation.top", "navigation.footer", "content.tooltips", "content.tabs.link", "search.highlight"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>index.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="index.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/index.html"/>
+    </url>
+    <url>
+        <loc>about.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="about.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/about.html"/>
+    </url>
+    <url>
+        <loc>advanced.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="advanced.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/advanced.html"/>
+    </url>
+    <url>
+        <loc>basics.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="basics.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/basics.html"/>
+    </url>
+    <url>
+        <loc>calflow.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="calflow.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/calflow.html"/>
+    </url>
+    <url>
+        <loc>faqs.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="faqs.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/faqs.html"/>
+    </url>
+    <url>
+        <loc>procedure.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="procedure.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/procedure.html"/>
+    </url>
+    <url>
+        <loc>program.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="program.html"/>
+        <xhtml:link rel="alternate" hreflang="de" href="de/program.html"/>
+    </url>
+    <url>
+        <loc>de/index.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="index.html"/>
+    </url>
+    <url>
+        <loc>de/about.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/about.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="about.html"/>
+    </url>
+    <url>
+        <loc>de/advanced.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/advanced.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="advanced.html"/>
+    </url>
+    <url>
+        <loc>de/basics.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/basics.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="basics.html"/>
+    </url>
+    <url>
+        <loc>de/calflow.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/calflow.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="calflow.html"/>
+    </url>
+    <url>
+        <loc>de/faqs.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/faqs.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="faqs.html"/>
+    </url>
+    <url>
+        <loc>de/procedure.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/procedure.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="procedure.html"/>
+    </url>
+    <url>
+        <loc>de/program.html</loc>
+        <lastmod>2025-06-25</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="de" href="de/program.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="program.html"/>
+    </url>
+</urlset>

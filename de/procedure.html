@@ -1,0 +1,1068 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="program.html">
+      
+      
+        <link rel="next" href="calflow.html">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Kalibrierung - VSE EasyCal v2.3 Dokumentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#calibration" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="index.html" title="VSE EasyCal v2.3 Dokumentation" class="md-header__button md-logo" aria-label="VSE EasyCal v2.3 Dokumentation" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSE EasyCal v2.3 Dokumentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kalibrierung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../procedure.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="procedure.html" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="basics.html" class="md-tabs__link">
+        
+  
+    
+  
+  Erste Schritte
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="program.html" class="md-tabs__link">
+        
+  
+    
+  
+  Vorbereitung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="procedure.html" class="md-tabs__link">
+        
+  
+    
+  
+  Kalibrierung
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="calflow.html" class="md-tabs__link">
+        
+  
+    
+  
+  Cal.flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="advanced.html" class="md-tabs__link">
+        
+  
+    
+  
+  Sonderfunktionen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="faqs.html" class="md-tabs__link">
+        
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="about.html" class="md-tabs__link">
+        
+  
+    
+  
+  Über
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="VSE EasyCal v2.3 Dokumentation" class="md-nav__button md-logo" aria-label="VSE EasyCal v2.3 Dokumentation" data-md-component="logo">
+      
+  <img src="../img/logo.png" alt="logo">
+
+    </a>
+    VSE EasyCal v2.3 Dokumentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="basics.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Erste Schritte
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="program.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vorbereitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kalibrierung
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="procedure.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kalibrierung
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierungsverfahren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kalibrierungsverfahren
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrierungsverfahren">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorab-prufungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorab-Prüfungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beschreibung-der-kalibrierprozedur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beschreibung der Kalibrierprozedur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durchfluss-hystereseprufung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Durchfluss-Hystereseprüfung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stetigkeitsprufung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stetigkeitsprüfung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berechnung-der-aktuellen-impulszahl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Berechnung der aktuellen Impulszahl
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erfassung-und-berechnung-des-k-faktors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erfassung und Berechnung des K-Faktors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erfassung und Berechnung des K-Faktors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messprinzip
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berechnung-des-k-faktors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Berechnung des K-Faktors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ergebnisliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ergebnisliste
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierungsbericht" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kalibrierungsbericht
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrierungsbericht">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ergebnisselektor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ergebnisselektor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plot-einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plot-Einstellungen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verwaltung-der-unternehmensdaten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verwaltung der Unternehmensdaten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportoptionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exportoptionen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cal.flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sonderfunktionen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faqs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Über
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="calibration">Kalibrierung<a class="headerlink" href="#calibration" title="Permanent link">#</a></h1>
+<h2 id="kalibrierungsverfahren"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20V8.8c.5-.2 1-.5 1.3-.9l3.5 1.3-2.9 6.8c-.5 2 1 3 3.5 3s4.1-1 3.5-3l-2.6-6.3.9.3.7-1.9L15 6c0-1.2-.7-2.4-2-2.9-1.2-.5-2.5 0-3.3.9L3.9 2l-.7 1.8 1.6.6L2.1 11c-.5 2 1 3 3.5 3s4.1-1 3.5-3L6.6 5.1 9 6c0 1.2.7 2.4 2 2.9V20H2v2h20v-2h-9m6.9-4h-3l1.5-3.8 1.5 3.8M7.1 11h-3l1.5-3.8L7.1 11m4-5.3c.2-.5.8-.8 1.3-.6s.8.8.6 1.3-.8.8-1.3.6-.8-.8-.6-1.3Z"/></svg></span>  Kalibrierungsverfahren<a class="headerlink" href="#kalibrierungsverfahren" title="Permanent link">#</a></h2>
+<h3 id="vorab-prufungen">Vorab-Prüfungen<a class="headerlink" href="#vorab-prufungen" title="Permanent link">#</a></h3>
+<p>Sobald die Schaltfläche <code>Kalibrierungsvorgang starten</code> gedrückt wird, werden alle konfigurierten Werte auf ihre Gültigkeit überprüft. Einige der geprüften Kriterien sind in der folgenden Liste aufgeführt. Nach erfolgreicher Prüfung werden sie in das Cal.flow Gerät übertragen und der Kalibriervorgang beginnt.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Name des Kalibrierprotokolls nicht leer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Probandenname nicht leer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Master-Linearisierungstabelle gültig und nicht leer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Viskositäts- und Temperaturfelder nicht leer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Kalibrierpunkttabelle gültig und nicht leer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Anzahl der Zyklen ist nicht Null</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ausgabeverzeichnis ist angegeben, existiert und ist beschreibbar</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Protokoll mit gleichem Namen ist nicht bereits vorhanden</li>
+</ul>
+<h3 id="beschreibung-der-kalibrierprozedur">Beschreibung der Kalibrierprozedur<a class="headerlink" href="#beschreibung-der-kalibrierprozedur" title="Permanent link">#</a></h3>
+<p>Nach dem Start der Kalibrierungsprozedur muss die Testperson die Durchflussrate des Prüfstands manuell steuern. Der aktuell angeforderte Wert wird zusammen mit der Durchflußhysterese im Feld <code>Ziel-Durchflußrate</code> angezeigt. Die Hysterese- und Stetigkeitsprüfungen laufen kontinuierlich im Hintergrund, um die Messung automatisch auszulösen. Nach einer erfolgreichen Messung wird der gemessene K-Faktor zur Ergebnistabelle hinzugefügt und der nächste Durchflusswert angefordert. Dieser Zyklus wiederholt sich, bis alle Kalibrierpunkte für alle Kalibrierzyklen gemessen sind. Danach kann das Protokoll erstellt werden.</p>
+<div class="admonition info">
+<p class="admonition-title">Abbruch der Kalibrierung</p>
+<p>Der Kalibrierungsprozess kann jederzeit über die Schaltfläche <code>Kalibrierung abbrechen</code> abgebrochen werden.</p>
+</div>
+<h3 id="durchfluss-hystereseprufung">Durchfluss-Hystereseprüfung<a class="headerlink" href="#durchfluss-hystereseprufung" title="Permanent link">#</a></h3>
+<p>Damit eine Messung ausgelöst werden kann, muss der Durchfluss des Volumensensors innerhalb des angegebenen Durchflussfensters liegen. Das absolute Durchflussfenster wird zusammen mit dem angeforderten Durchflusswert und im Live-Diagramm mit dünnen roten Linien angezeigt. Das Hysterese-Fenster kann entweder durch einen prozentualen Betrag (Feld <code>Durchflussstetige Hysterese</code>) oder durch absolute Hysterese-Grenzwerte (Felder <code>Minimum/Maximum-Durchflusshysterese</code>) oder durch eine Kombination aus beidem definiert werden. 
+Der durchflussabhängige Hysteresewert <span class="arithmatex">\(H\)</span> wird wie folgt berechnet:</p>
+<div class="arithmatex">\[
+H=\frac{Q_{target}\cdot H_{percent}}{100}
+\]</div>
+<p>Wenn die <code>minimale Durchflusshysterese</code> <span class="arithmatex">\(H_{min} \neq 0\)</span>, wird der berechnete Wert für <span class="arithmatex">\(H\)</span> auf <span class="arithmatex">\(H_{min}\)</span> begrenzt, wenn <span class="arithmatex">\(H&lt;H_{min}\)</span>. Wenn die <code>maximale Durchflusshysterese</code> <span class="arithmatex">\(H_{max} \neq 0\)</span>, wird der berechnete Wert für <span class="arithmatex">\(H\)</span> auf <span class="arithmatex">\(H_{max}\)</span> begrenzt, wenn <span class="arithmatex">\(H&gt;H_{max}\)</span>. </p>
+<div class="admonition tipp">
+<p class="admonition-title">Tipp</p>
+<p>Diese Funktion ist nützlich, wenn z.B. die Pumpenpulsation bei niedrigen Flussraten zu hoch ist als die gewünschte Hysterese für die restlichen Kalibrierpunkte.</p>
+</div>
+<p>Die Testperson kann die <code>Anpassungspfeil-Anzeige</code>, das Live-Diagramm oder die Textfelder <code>Aktueller Durchfluss</code> und <code>Ziel-Durchfluss</code> als Referenz verwenden, um den Durchfluss korrekt einzustellen.</p>
+<h3 id="stetigkeitsprufung">Stetigkeitsprüfung<a class="headerlink" href="#stetigkeitsprufung" title="Permanent link">#</a></h3>
+<p>Liegt der tatsächliche Durchfluss des Masters innerhalb des Durchfluss-Hysteresefensters des angeforderten Wertes, so wird für die angegebene Dauer (Feld <code>Stetige Durchflusszeit</code>) eine Stetigkeitsprüfung durchgeführt. Während dieser Zeit darf die Durchflussrate das Hysteresefenster nicht überschreiten, andernfalls wird der Steadyness-Zähler zurückgesetzt. </p>
+<p><img alt="" src="img/steadyness%20check.png" /></p>
+<div class="admonition question">
+<p class="admonition-title">Warum startet die Messung nicht, obwohl der Durchfluss richtig eingestellt ist?</p>
+<p>Versuchen Sie, die <code>minimale Durchflusshysterese</code> höher oder die <code>Flow steady time</code> niedriger einzustellen, so dass die Stetigkeitsprüfung erfolgreich abgeschlossen werden kann. Beobachten Sie das Diagramm - liegt der Hauptdurchfluss innerhalb der Hystereselinien?</p>
+<p>Ein weiterer Grund könnte sein, dass die Kalibrierungszustandsmaschine nicht läuft: Der Kalibrierungsprozess muss <strong>immer</strong> über die Schaltfläche <code>Kalibrierungsvorgang starten</code> auf der Seite <code>Kalibrierungseinrichtung</code> gestartet werden.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Hysterese- und Stetigkeitsprüfung außer Kraft setzen</p>
+<p>Wenn die Messung aufgrund von unerwartetem Strömungsverhalten oder falsch konfigurierten Einstellungen immer noch nicht auslöst, können die Überprüfungen durch Anklicken des Buttons <code>Jetzt messen!</code> übergangen werden, um die Punktaufnahme sofort auszulösen.</p>
+</div>
+<h3 id="berechnung-der-aktuellen-impulszahl">Berechnung der aktuellen Impulszahl<a class="headerlink" href="#berechnung-der-aktuellen-impulszahl" title="Permanent link">#</a></h3>
+<p>Die gewünschte Impulszahl kann über das Feld <code>Zahl der Zähne/Impulse</code> eingestellt werden. Die tatsächliche Soll-Impulszahl wird auf der Grundlage des Volumensensors IPF, der Anschlusskonfiguration und der angegebenen <code>Maximalpunktzeit</code> berechnet. Unabhängig vom konfigurierten Interpolationsfaktor des Volumensensors verwendet die Software immer dieselbe Anzahl von Volumensensorumdrehungen als Eingangswert. Anhand der Frequenz des Volumensensors beim Start der Messung wird die erwartete Anzahl von Impulsen in der angegebenen maximalen Punktzeit berechnet. Wenn der Parameter <code>maximale Punktdauer</code> <span class="arithmatex">\(\neq 0\)</span> ist und die erwartete Anzahl von Impulsen diese Zeitspanne überschreitet, wird die Zielimpulszahl beschnitten, um unter der angegebenen Zeitgrenze zu bleiben. </p>
+<div class="admonition warnung">
+<p class="admonition-title">Warnung</p>
+<p>Die Verwendung der Funktion <code>Maximalzeitpunkt</code> führt zu einer geringeren und nicht konstanten Messgenauigkeit, wenn die Zielimpulszahl intern abgeschnitten wird. </p>
+</div>
+<h3 id="erfassung-und-berechnung-des-k-faktors">Erfassung und Berechnung des K-Faktors<a class="headerlink" href="#erfassung-und-berechnung-des-k-faktors" title="Permanent link">#</a></h3>
+<p>Nach erfolgreicher Stabilitätsprüfung beginnt die Software mit der Zählung der Impulse beider Volumensensoren und führt eine K-Faktor-Berechnung durch.</p>
+<h4 id="messprinzip">Messprinzip<a class="headerlink" href="#messprinzip" title="Permanent link">#</a></h4>
+<p>Das Messprinzip basiert auf der Ratio-Counting-Methode, um eine hohe Messgenauigkeit zu erreichen. Dieses Prinzip ist eine Frequenzmessmethode, die die Flankenübergänge der Ausgangssignale der Volumensensoren zusammen mit einem hochfrequenten Referenztakt nutzt. Wird der Messstart ausgelöst, werden beide Volumensensoren gleichzeitig gemessen. Zunächst wird die Richtung des Volumensensors überprüft, um die interne Zählrichtung festzulegen. Danach wartet der Cal.flow 250 ms und auf die nächste steigende Signalflanke, um die Zählung tatsächlich zu starten. Es werden sowohl die Impulse des Volumensensors als auch die internen Timer-Takte gezählt, bis die gewünschte Anzahl von Master-Impulsen erreicht ist. Genau während des Flankenübergangs des letzten Masterimpulses wird dessen Impulszählwert abgefragt. Nun wird ein Signal an den Prüflingskanal gesendet, um den Messstopp beim nächsten Flankenwechsel des Prüflings auszulösen. Der Status wird durch Fortschrittsbalken angezeigt. </p>
+<p><img alt="" src="img/counts.png" /></p>
+<div class="admonition warnung">
+<p class="admonition-title">Zählungen sind nicht vergleichbar</p>
+<p>Nach Beendigung der Messung erhalten Sie einen Ergebniseintrag, der auch die Impulszahlen von Master und Slave enthält. Diese Werte entsprechen zwar den tatsächlich gemessenen Impulsen, können aber nicht miteinander verglichen werden, da die Master- und DUT-Kanäle nicht die gleiche Zeitbasis (exakte Messzeit) haben. Um die beiden Volumensensoren genau zu vergleichen, verwenden Sie die Frequenzwerte oder die Formel in der nächsten Hilfeblase.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Virtuelle DUT-Impulszahl berechnen</p>
+<p>Sie können auch eine exakte Prüflingsimpulszahl berechnen, um sie mit der Master-Impulszahl zu vergleichen, indem Sie die folgende Formel verwenden: </p>
+<div class="arithmatex">\[
+\frac{n_{\text{DUT}}}{n_{\text{Master}}} = \frac{f_{\text{DUT}}}{f_{\text{Master}}} \Leftrightarrow n_{\text{DUT}} = \frac{f_{\text{DUT}}\cdot n_{\text{Master}}}{f_{\text{Master}}} \Rightarrow n_{\text{DUT}} = \frac{f_{\text{DUT}}\cdot 10000}{f_{\text{Master}}}
+\]</div>
+</div>
+<h4 id="berechnung-des-k-faktors">Berechnung des K-Faktors<a class="headerlink" href="#berechnung-des-k-faktors" title="Permanent link">#</a></h4>
+<p>Der K-Faktor des Prüflings wird auf der Grundlage der durchschnittlichen Frequenzen beider Volumensensoren im Messintervall berechnet. Die Durchflussmenge durch beide Volumensensoren wird als gleich angesehen, was zu den folgenden Gleichungen führt. Da die genauen Kalibrierwerte des Volumensensors bekannt sind, kann der K-Faktor des Prüflings direkt mit nur drei Werten berechnet werden. </p>
+<div class="admonition info inline end">
+<p class="admonition-title">Hängt von der Anschlusskonfiguration ab</p>
+<p>Wenn die Portkonfiguration auf 2-kanalige Auswertung eingestellt ist, werden alle Signalflanken gezählt. Dies hat zur Folge, dass die gemessene Frequenz durch <span class="arithmatex">\(4\)</span> geteilt wird. Bei einkanaliger Auswertung kann der Faktor weggelassen werden, da nur steigende Flanken gezählt werden.</p>
+</div>
+<div class="arithmatex">\[
+f_{M} = (\frac{1}{4}) \cdot \frac{f_{CLK} \cdot n_{Impulse,M}}{n_{CLK,M}}
+\]</div>
+<div class="arithmatex">\[
+f_{DUT} = (\frac{1}{4}) \cdot \frac{f_{CLK} \cdot n_{pulses,DUT}}{n_{CLK,DUT}}
+\]</div>
+<div class="arithmatex">\[
+K_{Fact,DUT}=\frac{K_{Fact,M}(f_{M})\cdot f_{DUT}}{f_{M}}
+\]</div>
+<div class="admonition info">
+<p class="admonition-title">Berechnung des K-Faktors des Masters</p>
+<p>Die Berechnung des Master-K-Faktors <span class="arithmatex">\(K_{Fact,M}(f_{M})\)</span> erfolgt durch lineare Interpolation der mitgelieferten Master-Linearisierungstabelle. Die Funktion verwendet die gemessene Frequenz als Eingabe für die Berechnung des passenden K-Faktors. Der lineare Interpolationsalgorithmus verwendet die <span class="arithmatex">\(f/K_{Fact}\)</span>-Kurve des Volumensensors, um die Berechnungen durchzuführen.</p>
+</div>
+<h3 id="ergebnisliste">Ergebnisliste<a class="headerlink" href="#ergebnisliste" title="Permanent link">#</a></h3>
+<p>Nach jedem abgeschlossenen Messpunkt werden die Messergebnisse von cal.flow an den PC übertragen und in der untenstehenden Ergebnistabelle angezeigt:</p>
+<p><img alt="" src="img/resultlist.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Spalte</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nr.</td>
+<td>Messstellenindex, der sich auf die <a href="program.html#step-5-measurement-configuration">hier</a> definierten Messstellen bezieht</td>
+</tr>
+<tr>
+<td>Zyklus</td>
+<td>Index des Messzyklus, der angibt, wie oft dieser Punkt bereits gemessen wurde</td>
+</tr>
+<tr>
+<td>Flowrate</td>
+<td>Durchflusswert in Litern pro Minute (linearisierter Wert vom Master)</td>
+</tr>
+<tr>
+<td>K-Faktor</td>
+<td>Resultierender Kalibrierungsfaktor für den Prüfling an diesem spezifischen Punkt. Die Einheit ist Pulse pro Liter</td>
+</tr>
+<tr>
+<td>Freq. DUT</td>
+<td>Genauer Frequenzwert, der auf dem DUT-Kanal gemessen wurde</td>
+</tr>
+<tr>
+<td>Freq. Master</td>
+<td>Genauer Frequenzwert, der auf dem Masterkanal gemessen wurde</td>
+</tr>
+<tr>
+<td>Meas. pulses DUT</td>
+<td>Tatsächliche Anzahl der gemessenen Prüflingsimpulse</td>
+</tr>
+<tr>
+<td>Theor. pulses DUT</td>
+<td>Theoretische Anzahl von Impulsen basierend auf den genau gemessenen Frequenzen und der Master-Zählung. Dieser Wert ist besser, wenn Sie ihn mit der Master-Impulszahl vergleichen wollen.</td>
+</tr>
+<tr>
+<td>Meas. pulses Master</td>
+<td>Tatsächliche Anzahl der Master-Impulse, die gemessen wurden</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kalibrierungsbericht"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m1 18h2v-6H7v6m4 0h2v-8h-2v8m4 0h2v-4h-2v4Z"/></svg></span>  Kalibrierungsbericht<a class="headerlink" href="#kalibrierungsbericht" title="Permanent link">#</a></h2>
+<p>Ein Kalibrierungsbericht enthält alle Informationen über die Kalibrierung und dokumentiert die gesamte Messung. Er enthält Daten wie:</p>
+<ul>
+<li>Referenzsensor</li>
+<li>Prüfsensor (DUT)</li>
+<li>Volumensensor-Einstellungen</li>
+<li>Messbedingungen</li>
+<li>Informationen zum Unternehmen und zur Testperson</li>
+<li>Datum und Uhrzeit</li>
+<li>Zusätzliche Informationen</li>
+</ul>
+<h3 id="ergebnisselektor">Ergebnisselektor<a class="headerlink" href="#ergebnisselektor" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/resultselect.png" /></p>
+<p>Sie kann entweder nach einer abgeschlossenen Kalibrierung aus dieser Programmsitzung generiert oder über das <a href="basics.html#file-menu">file menu</a> importiert werden. In beiden Fällen werden die Kalibrierungsdaten im Ergebnisselektor angezeigt (siehe Bild). Der Eintrag ist grün hinterlegt, wenn die Kalibrierung erfolgreich abgeschlossen wurde. Eine rote Farbe zeigt an, dass die Kalibrierungsdaten unvollständig sind und nicht für die Berichterstellung verwendet werden können.</p>
+<p>Wenn ein Ergebnis ausgewählt ist, wird das zugehörige Kalibrierungsprotokoll im Vorschaufenster erstellt. </p>
+<h3 id="plot-einstellungen">Plot-Einstellungen<a class="headerlink" href="#plot-einstellungen" title="Permanent link">#</a></h3>
+<p><img alt="plotsettings" src="img/plotsettings.png" /></p>
+<p><strong>Berichtfehlerplot auf ±1% begrenzen</strong> </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5h14m-9 12-4-4 1.41-1.42L10 14.17l6.59-6.59L18 9"/></svg></span> Wenn diese Option aktiviert ist (<em>Standard</em>), beträgt der Fehlerplotbereich des generierten Kalibrierungsprotokolls ±1%. </p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m0 2v14H5V5h14Z"/></svg></span> Wenn nicht angekreuzt, wird die Skalierung automatisch berechnet.</p>
+<p><strong>Wiederholbarkeitsberechnungsmethoden</strong> </p>
+<p>Wählen Sie zwischen zwei Berechnungsmodi für die Wiederholbarkeit der Messstelle. Die Wiederholbarkeit gibt an, wie wiederholbar ein gemessener Durchflusswert unter gleichen Durchflussbedingungen zu verschiedenen Zeiten (z.B. Messzyklen) ist. Eine Wiederholbarkeitsberechnung ist nur bei mindestens zwei Zyklen möglich.</p>
+<ol>
+<li>
+<p>Die erste Methode basiert auf dem maximalen, minimalen und durchschnittlichen K-Faktor aller gemessenen Zyklen eines Punktes und wird wie folgt berechnet:</p>
+<div class="arithmatex">\[
+\textrm{Wiederholbarkeit im Punkt n [%]} = \frac{(K_{\textrm{n,max}} - K_{\textrm{n,min}})}{\overline{K_{\textrm{n}}}} \cdot \frac{100}{2}
+\]</div>
+</li>
+<li>
+<p>Der andere basiert auf dem Variationskoeffizienten, der aus dem Durchschnitt und der Standardabweichung aller gemessenen Zyklen eines Punktes wie folgt berechnet wird:</p>
+<div class="arithmatex">\[
+\textrm{Wiederholbarkeit im Punkt n [%]} = 100 \cdot \frac{\sigma_{\text{ K,n}}}{\overline{K_{n}}}
+\]</div>
+</li>
+</ol>
+<!-- Manuell gesetzter Sprungpunkt -->
+<p><a id="error-calc"></a></p>
+<p><strong>Fehlerberechnung</strong></p>
+<p>Der relative Fehler im Punkt <span class="arithmatex">\(n\)</span> [%] wird auf Basis des arithmetischen Mittelwerts <span class="arithmatex">\(\overline{K}\)</span> aller gemessenen K-Faktoren berechnet als:</p>
+<div class="arithmatex">\[
+\mathrm{Relativer\ Fehler}_n\ [\%] = 100 \cdot \frac{K_n - \overline{K}}{\overline{K}}
+\]</div>
+<h3 id="verwaltung-der-unternehmensdaten">Verwaltung der Unternehmensdaten<a class="headerlink" href="#verwaltung-der-unternehmensdaten" title="Permanent link">#</a></h3>
+<p><img alt="" src="img/company.png" /></p>
+<p>Um das im Kalibrierprotokoll angezeigte Firmenlogo, den Namen und die Adresse zu ändern (<em>Firmenadresse siehe Seitenfuß</em>), geben Sie die Daten in die vorgesehenen Eingabefelder ein. Um das Logo zu setzen oder zu überschreiben, suchen Sie Ihr Logo als <code>*.jpg</code> oder <code>*.png</code> mit dem Explorer und ziehen es in das Logofeld. Die Daten können dann über die Schaltfläche <code>Firmeninfo speichern</code> dauerhaft gespeichert werden. Die Daten werden beim Programmstart automatisch wiederhergestellt.</p>
+<p>Nach einer Änderung der Firmendaten ist eine manuelle Aktualisierung des generierten Kalibrierprotokolls erforderlich. Bitte verwenden Sie dazu die Schaltfläche <code>Protokoll aktualisieren</code> oberhalb der Protokollvorschau.</p>
+<h3 id="exportoptionen">Exportoptionen<a class="headerlink" href="#exportoptionen" title="Permanent link">#</a></h3>
+<p>Nach Abschluss einer Kalibrierung und der Erstellung eines Protokolls gibt es mehrere Möglichkeiten, die Ergebnisse zu speichern und zu exportieren. Generell wird die Ergebnisdatei während und nach der Kalibrierung automatisch im angegebenen Ausgabeverzeichnis gespeichert. </p>
+<p><strong>1. Verwendung der Speicheroptionen</strong></p>
+<p><img alt="" src="img/export1.png" /></p>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Beschreibung</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ausgabeverzeichnis öffnen</td>
+<td>Schnellverknüpfung zum Öffnen des Stammverzeichnisses des angegebenen Ausgabeverzeichnisses. Die Ergebnisdateien befinden sich in einem Ordner, der aus dem aktuellen Jahr und Monat <code>`YYYY-MM</code> besteht.</td>
+</tr>
+<tr>
+<td>PDF-Protokoll speichern</td>
+<td>Speichert das angezeigte Kalibrierungsprotokoll direkt in eine PDF-Datei an einem vom Benutzer festgelegten Ort.</td>
+</tr>
+<tr>
+<td>Ergebnisdatei speichern</td>
+<td>Speichert eine Kopie des aktuell geladenen Ergebnisses an einem benutzerdefinierten Ort.</td>
+</tr>
+<tr>
+<td>Kalibrierung speichern *.zip</td>
+<td>Exportiert ein Archiv mit allen möglichen Daten über die Kalibrierung. Es enthält die Ergebnisdatei, das Bericht-PDF und alle aktuell ausgewählten Vorlagen. Diese Option ist nur direkt nach Abschluss einer Kalibrierung sinnvoll, da alle Vorlagen und Einstellungen noch ausgewählt sind. Nur die derzeit aktiven Vorlagen werden in die *.zip-Datei exportiert. Verwenden Sie diese Option, um Vorlagen und Ergebnisdaten an andere Instanzen von VSE EasyCal zu senden/zu übertragen.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Verwendung der Exportoptionen des Reportviewers</strong></p>
+<p><img alt="" src="img/export2.png" /></p>
+<p>Innerhalb des Berichtsfensters gibt es Optionen, um den angezeigten Bericht als PDF-, Word- oder Excel-Datei zu exportieren.</p>
+<p><strong>3. Export von Berichtsdaten in externe Programme</strong></p>
+<p><img alt="" src="img/export3.png" /></p>
+<p>Über die Schaltflächen am oberen Rand des Berichtsviewers können die Daten in andere Programme exportiert werden. Der <code>Export PDF</code> öffnet den Bericht direkt im Standard-PDF-Viewer zur weiteren Bearbeitung. Um die Kalibrierungsergebnisse mit höherer Genauigkeit als auf dem generierten Bericht zu prüfen und weitere Berechnungen zu ermöglichen, können die Ergebnisse mit dem Button <code>Export Excel</code> in eine Excel-Tabelle mit allen verfügbaren Stellen exportiert werden. </p>
+<div class="admonition warnung">
+<p class="admonition-title">Excel-Export <span class="arithmatex">\(\neq\)</span> Excel-Export</p>
+<p>Die Excel-Exportfunktion der Berichtsansicht (in Option 2) <strong>führt</strong> nicht zum gleichen Ergebnis wie der Excel-Export über den separaten Button in Option 3. Während bei der ersten Option nur das Layout des Berichtsgenerators in Zellen exportiert wird, exportiert die zweite Option die in der Kalibrierungs-Registerkarte angezeigten Tabellen mit der maximalen Anzahl von Stellen für weitere Berechnungen.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Fußzeile" >
+        
+          
+          <a href="program.html" class="md-footer__link md-footer__link--prev" aria-label="Zurück: Vorbereitung">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Zurück
+              </span>
+              <div class="md-ellipsis">
+                Vorbereitung
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="calflow.html" class="md-footer__link md-footer__link--next" aria-label="Weiter: Cal.flow">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Weiter
+              </span>
+              <div class="md-ellipsis">
+                Cal.flow
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.integrate", "navigation.expand", "navigation.top", "navigation.footer", "content.tooltips", "content.tabs.link", "search.highlight"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

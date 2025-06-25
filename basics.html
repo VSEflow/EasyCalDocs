@@ -1,0 +1,1042 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="program.html">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Basics - VSE EasyCal v2.3 Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#program-features-and-basics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="VSE EasyCal v2.3 Documentation" class="md-header__button md-logo" aria-label="VSE EasyCal v2.3 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            VSE EasyCal v2.3 Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Basics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="basics.html" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="de/basics.html" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="basics.html" class="md-tabs__link">
+        
+  
+    
+  
+  Basics
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="program.html" class="md-tabs__link">
+        
+  
+    
+  
+  Setup
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="procedure.html" class="md-tabs__link">
+        
+  
+    
+  
+  Calibration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="calflow.html" class="md-tabs__link">
+        
+  
+    
+  
+  Cal.flow
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="advanced.html" class="md-tabs__link">
+        
+  
+    
+  
+  Advanced
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="faqs.html" class="md-tabs__link">
+        
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="about.html" class="md-tabs__link">
+        
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="VSE EasyCal v2.3 Documentation" class="md-nav__button md-logo" aria-label="VSE EasyCal v2.3 Documentation" data-md-component="logo">
+      
+  <img src="img/logo.png" alt="logo">
+
+    </a>
+    VSE EasyCal v2.3 Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="basics.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Basics
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hydraulic-schematic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hydraulic schematic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-of-the-calflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection of the Cal.flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Connection of the Cal.flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m12-input-signals" class="md-nav__link">
+    <span class="md-ellipsis">
+      M12 input signals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pc-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      PC connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dc-power-jack" class="md-nav__link">
+    <span class="md-ellipsis">
+      DC power jack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-to-the-pc-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection to the PC software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#program-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Program features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Program features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#menu-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Menu Bar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Menu Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      File menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license-management-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      License Management menu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help-documentation-menu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help / Documentation menu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tab Pages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tab Pages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#preset-based-calibration-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preset-based calibration configuration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection page
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Plots
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      License Manager
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="program.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="procedure.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Calibration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calflow.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cal.flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="advanced.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faqs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="program-features-and-basics">Program features and basics<a class="headerlink" href="#program-features-and-basics" title="Permanent link">#</a></h1>
+<h2 id="basic-setup">Basic setup<a class="headerlink" href="#basic-setup" title="Permanent link">#</a></h2>
+<h3 id="hydraulic-schematic"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17c1.21 0 3-.8 3-3s-1.79-3-3-3h-2V9h2c2.2 0 3-1.79 3-3 0-2.2-1.79-3-3-3h-2V2h-1v1H8V2H7v1H2v2h5v2H5c-1.21 0-3 .8-3 3s1.79 3 3 3h2v2H5c-1.21 0-3 .8-3 3s1.79 3 3 3h2v1h1v-1h8v1h1v-1h5v-2h-5v-2h2m0-4c.45 0 1 .19 1 1s-.55 1-1 1h-2v-2h2m-3-2H8V9h8v2m3-6c.45 0 1 .2 1 1 0 .45-.19 1-1 1h-2V5h2M8 5h8v2H8V5m-3 6c-.45 0-1-.19-1-1s.55-1 1-1h2v2H5m3 2h8v2H8v-2m-3 6c-.45 0-1-.19-1-1s.55-1 1-1h2v2H5m11 0H8v-2h8v2Z"/></svg></span> Hydraulic schematic<a class="headerlink" href="#hydraulic-schematic" title="Permanent link">#</a></h3>
+<p>To build a calibration setup using the reference calibration principle, you need a master flowmeter with an existing calibration protocol and a test flowmeter (called DUT). A sample setup is shown in the following image. A hydraulic pump is pumping the calibration fluid through both flowmeters which are connected in series so that the flowrate through both flowmeters is always equal. The flowrate needs to be adjustable, for example using a constant pump in conjunction with a pressure relief valve and a throttle valve or using a pump with adjustable speed (e.g. frequency inverter). Please also note that the flowmeters should never used without backpressure at the output. For this purpose, a suitable check valve can be used.</p>
+<figure>
+<p><img alt="" src="img/hyd.svg" />
+  </p>
+<figcaption>Hydraulic schematic for reference calibration principle</figcaption>
+</figure>
+<h3 id="connection-of-the-calflow"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 7V3h-2v4h-4V3H8v4C7 7 6 8 6 9v5.5L9.5 18v3h5v-3l3.5-3.5V9c0-1-1-2-2-2Z"/></svg></span> Connection of the Cal.flow<a class="headerlink" href="#connection-of-the-calflow" title="Permanent link">#</a></h3>
+<p>The Cal.flow is the interface between the flowmeters and the calibration software, which runs on a computer. The quadrature (or single channel) signals will be accurately measured in order to calculate the K-Factor for each measurement point.
+The connections on the device are two female M12 A-coded connectors, an USB-C port and an optional DC-power jack. </p>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="img/kb_m12.png" /></th>
+<th><img alt="" src="img/kb_usbdc.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cal.flow: Flowmeter M12 Connections</td>
+<td>Cal.flow: Flowmeter Auxilary Connections</td>
+</tr>
+</tbody>
+</table>
+<h4 id="m12-input-signals">M12 input signals<a class="headerlink" href="#m12-input-signals" title="Permanent link">#</a></h4>
+<p>To connect the flowmeters, two 2m M12 connection cables are included. </p>
+<ul>
+<li>Push-Pull preamplifier outputs and PNP outputs work out of the box without external components</li>
+<li>NPN outputs need an additional external pull-up resistor on the output line before the signals can be correctly measured </li>
+</ul>
+<p>Not only VSE flowmeters can be calibrated. Any quadrature based signal can be measured with the Cal.flow. Before connecting the flowmeter, check the correct pinout. Please refer to the diagram below:</p>
+<div class="admonition danger inline end">
+<p class="admonition-title">Ensure correct pinout</p>
+<p>It is the user's responsibility to ensure the correct pin assignment of the connected flowmeter. Incorrect connections may result in electrical damage to the Cal.flow or flowmeter.</p>
+</div>
+<p><img alt="" src="img/m12%20pinout%20kalibox%20onblack.svg" /></p>
+<h4 id="pc-connection">PC connection<a class="headerlink" href="#pc-connection" title="Permanent link">#</a></h4>
+<p>For the PC connection you can use the included USB-C to USB A cable or any other USB-C Cable you have on hand. These connections are mandatory.</p>
+<h4 id="dc-power-jack">DC power jack<a class="headerlink" href="#dc-power-jack" title="Permanent link">#</a></h4>
+<p>The DC-power jack is optional because the Cal.flow has an internal 5V to 24V voltage booster, which can be used to power the flowmeters. If the total current draw from the flowmeters exceeds 50 mA, an external power supply has to be used to not damage or overheat the Cal.flow device. Another option is to use a T-junction M12 connector on one of the flowmeter ports to inject a existing 24V supply voltage externally (e.g. from the testbench). The voltage will then be passed through to the other flowmeter.</p>
+<h3 id="connection-to-the-pc-software"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg></span> Connection to the PC software<a class="headerlink" href="#connection-to-the-pc-software" title="Permanent link">#</a></h3>
+<p>If you read this step, the software is probably already installed. The Cal.flow is automatically identified by the PC upon connection and should be shown as a virtual COM port in the device manager (VCP). If the device is not automatically installed, please install the <a href="https://ftdichip.com/drivers/vcp-drivers/">FTDI drivers</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg></span>.</p>
+<p>The EasyCal software automatically scans for a Cal.flow device and starts the connection procedure.</p>
+<h2 id="program-features">Program features<a class="headerlink" href="#program-features" title="Permanent link">#</a></h2>
+<p>This chapter shows an overview of all available features ordered by the pages in the tab drawer. Every feature will be described to explain its specific function.</p>
+<p>The program consists of multiple tab pages that can be switched using the headers on the top. Additional program settings and file save/open options can be found in the <a href="basics.html#menu-bar">menu bar</a>. On the first connection the program will start on the <a href="basics.html#connection-page">connection page</a>. </p>
+<p>Before first use, the Cal.flow needs to be activated with a serial key. If the program was started the first time and no serial number was entered yet, use the <a href="basics.html#license-manager">license manager</a> to store the serial number in the program. </p>
+<p>If the key is set and the Cal.flow is connected via USB. The connection should be established automatically. The serial number of the Cal.flow is then displayed in the bottom statusbar. </p>
+<figure>
+<p><img alt="" src="img/bottombar.png" />
+  </p>
+<figcaption>Bottom statusbar with connection status</figcaption>
+</figure>
+<h3 id="menu-bar"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 15.61 19.59 17l-5.01-5 5.01-5L21 8.39 17.44 12 21 15.61M3 6h13v2H3V6m0 7v-2h10v2H3m0 5v-2h13v2H3Z"/></svg></span>  Menu Bar<a class="headerlink" href="#menu-bar" title="Permanent link">#</a></h3>
+<p>The menu bar offers multiple options to configure the software.</p>
+<p><img alt="" src="img/menubar.png" /></p>
+<h4 id="file-menu">File menu<a class="headerlink" href="#file-menu" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/filemenu.png" /></p>
+<ul>
+<li><strong>Open Result file</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span> Import .csv file with calibration results and add them to the calibration report result selector.</li>
+<li><strong>Open Appdata folder</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span> Open the Appdata folder containing all saved presets and program settings. If you want to delete presets, you can manually delete them in the folder structure here.</li>
+<li><strong>Open calibration *.zip</strong>  <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span> Opens a ZIP archive containing calibration presets and results and imports them all. The presets will be added to the preset selectors and the result to the result selector. The presets will be permanently added.</li>
+<li><strong>Open calibration *.zip</strong>  :octic</li>
+</ul>
+<h4 id="license-management-menu">License Management menu<a class="headerlink" href="#license-management-menu" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/licmenu.png" /></p>
+<ul>
+<li><strong>Status: ...</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span> Displays the current Cal.flow connection and activation status. The status will stay unactivated until a Cal.flow is connected and the key is verified.</li>
+<li><strong>Open License Manager</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></span> Open the <a href="basics.html#license-manager">license manager</a> to save new serial keys and manage existing ones. Multiple Cal.flow keys can be added. The one used is chosen by the <em>main key</em> flag.</li>
+</ul>
+<h4 id="help-documentation-menu">Help / Documentation menu<a class="headerlink" href="#help-documentation-menu" title="Permanent link">#</a></h4>
+<p><img alt="" src="img/helpmenu.png" /></p>
+<p>Pressing this button opens this documentation in the default browser.</p>
+<h3 id="tab-pages"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.25 4a.25.25 0 0 0-.25.25v9a.75.75 0 0 1-.75.75H.75a.75.75 0 0 1 0-1.5h.75V4.25c0-.966.784-1.75 1.75-1.75h9.5c.966 0 1.75.784 1.75 1.75v8.25h.75a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75v-9a.25.25 0 0 0-.25-.25h-9.5Z"/><path d="m7.97 7.97-2.75 2.75a.75.75 0 1 0 1.06 1.06l2.75-2.75 1.543 1.543a.25.25 0 0 0 .427-.177V6.25a.25.25 0 0 0-.25-.25H6.604a.25.25 0 0 0-.177.427L7.97 7.97Z"/></svg></span>  Tab Pages<a class="headerlink" href="#tab-pages" title="Permanent link">#</a></h3>
+<p>Depending on the Cal.flow connection state, different tab pages will be shown. 
+Without any connection, the user can only load existing calibration results.</p>
+<p><img alt="" src="img/tabpages.png" /> </p>
+<h4 id="preset-based-calibration-configuration">Preset-based calibration configuration<a class="headerlink" href="#preset-based-calibration-configuration" title="Permanent link">#</a></h4>
+<p>Most of the calibration configuration is preset based. This means that all fields of a certain groupbox can be saved and restored using the corresponding buttons. This is for example useful if you have a few masters on hand that you want to specify once and later use again. Also company internal standards for measurement specifications can be saved so that all calibrations are based on the same settings. The presets are stored in the Appdata directory (which can be manually opened using the <a href="basics.html#file-menu">file menu</a>) and are automatically imported on program start. </p>
+<details class="question">
+<summary>Manage presets</summary>
+<p>If you want to manage your presets or delete some of them, use the appdata folder to browse all presets and delete the corresponding <code>*.xml</code>-Files</p>
+</details>
+<h4 id="connection-page"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.4 7.5c.8.8.8 2.1 0 2.8l-2.8 2.8-7.8-7.8 2.8-2.8c.8-.8 2.1-.8 2.8 0l1.8 1.8 3-3 1.4 1.4-3 3 1.8 1.8m-5.8 5.8-1.4-1.4-2.8 2.8-2.1-2.1 2.8-2.8-1.4-1.4-2.8 2.8-1.5-1.4-2.8 2.8c-.8.8-.8 2.1 0 2.8l1.8 1.8-4 4 1.4 1.4 4-4 1.8 1.8c.8.8 2.1.8 2.8 0l2.8-2.8-1.4-1.4 2.8-2.9Z"/></svg></span>  Connection page<a class="headerlink" href="#connection-page" title="Permanent link">#</a></h4>
+<p>The connection page is the first page being shown on program startup. It is hidden once a device is connected.</p>
+<figure>
+<p><img alt="ConnectionManager" src="img/conn_unconn.png" />
+  </p>
+<figcaption>Connection page with no device connected</figcaption>
+</figure>
+<ul>
+<li>If no serial was entered yet, a message is displayed and you need to use the <a href="basics.html#license-manager">license manager</a> to add the key.</li>
+<li>If the serial is already saved, the "please connect" message is shown and you need to connect the Cal.flow using the included USB-C cable to the PC. If the Cal.flow is not automatically recognized, please refer to <a href="basics.html#connection-to-the-pc-software">this</a> section for driver installation information. </li>
+<li>Normally, the Cal.flow will be automatically recognized and the <a href="program.html#master-setup">master setup page</a> will be shown. </li>
+<li>Alternatively you can import a result file or calibration package using the options in the <a href="basics.html#file-menu">file menu</a> without a device connection in order to generate a report or export the data.</li>
+</ul>
+<figure>
+<p><img alt="ConnectionManager" src="img/conn_connected.png" />
+  </p>
+<figcaption>Status bar with connected Cal.flow</figcaption>
+</figure>
+<p>Once connected, the bottom status bar will turn green and the Cal.flow serial number is displayed. Futhermore the live data stream for the plots is now active in the right-hand window.</p>
+<h2 id="live-plots"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2h2v18h18v2H2V2m12 12.5L12 18H7.94l-2.02-3.5L7.94 11H12l2 3.5m.08-8L12.06 10H8L6 6.5 8 3h4.06l2.02 3.5m7.17 4L19.23 14h-4.04l-2.02-3.5L15.19 7h4.04l2.02 3.5Z"/></svg></span>  Live Plots<a class="headerlink" href="#live-plots" title="Permanent link">#</a></h2>
+<p><img alt="plots" src="img/plotsection.png" /></p>
+<p>The flowrate / frequency of both connected flowmeters is continuously monitored and presented in the rightmost panels. The top panel shows the masters flowrate. Below it, the DUT's frequency is shown. </p>
+<p>To display correct and plausible values, the flowmeters must be properly configured using the <a href="program.html">calibration setup</a>. </p>
+<p>Using the sliders on top of the plots, the plot's filter dynamics can be adjusted. A lower filter value will yield in a faster and noisier frequency visualization - a higher filter value smoothes out the frequency. Refer to the following table for rise times of the filter:</p>
+<table>
+<thead>
+<tr>
+<th>Rise time [ms]</th>
+<th>Filter Setting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>20</td>
+<td>1</td>
+</tr>
+<tr>
+<td>150</td>
+<td>2</td>
+</tr>
+<tr>
+<td>800</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2000</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5000</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>The sample rate adjusts, how fast the frequency value are requested from the cal.flow. A higher sample rate will result in a higher refresh rate and smoother display. At the same time the effective displayed history duration will be shortened. So if you want to see a longer history, a lower sample rate should be chosen.  </p>
+<h2 id="license-manager"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M10.5 0a5.499 5.499 0 1 1-1.288 10.848l-.932.932a.749.749 0 0 1-.53.22H7v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22H5v.75a.749.749 0 0 1-.22.53l-.5.5a.749.749 0 0 1-.53.22h-2A1.75 1.75 0 0 1 0 14.25v-2c0-.199.079-.389.22-.53l4.932-4.932A5.5 5.5 0 0 1 10.5 0Zm-4 5.5c-.001.431.069.86.205 1.269a.75.75 0 0 1-.181.768L1.5 12.56v1.69c0 .138.112.25.25.25h1.69l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l.06-.06v-1.19a.75.75 0 0 1 .75-.75h1.19l1.023-1.025a.75.75 0 0 1 .768-.18A4 4 0 1 0 6.5 5.5ZM11 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg></span>  License Manager<a class="headerlink" href="#license-manager" title="Permanent link">#</a></h2>
+<p>The license manager allows the user to add one or multiple Cal.flow serial numbers. Enter the serial key that you got on purchase via mail and press <code>Save</code>. The serial number that the program should use has to be selected with the <code>mark as main key</code> button. The software can only connect to one Cal.flow device at a time. The connection will always be established with the main key. </p>
+<p>A new key can be added by entering the full serial number into the key field and pressing <code>Save</code>. </p>
+<div class="admonition warning">
+<p class="admonition-title">Mark as main key</p>
+<p>Dont forget to mark the new key as the main key using the button in the table so that the "dot" next to the key is visible.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th><img alt="" src="img/serialmissing.png" /></th>
+<th><img alt="" src="img/keyentry.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Message on connection page if no serial was entered</td>
+<td>Entering of serial key and selecting as main key</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="program.html" class="md-footer__link md-footer__link--next" aria-label="Next: Setup">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Setup
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "toc.integrate", "navigation.expand", "navigation.top", "navigation.footer", "content.tooltips", "content.tabs.link", "search.highlight"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
